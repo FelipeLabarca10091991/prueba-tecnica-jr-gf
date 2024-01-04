@@ -1,9 +1,14 @@
 .container{
-  height: 100vh;
-  display: flex;
+  display: grid;
+place-items: center;
+}
+.logo{
+  display: grid;
   justify-content: center;
+  margin: auto;
 }
 img{
+
   width: 20%;
   height: 20%;
 }
