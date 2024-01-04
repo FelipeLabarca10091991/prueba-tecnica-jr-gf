@@ -12,8 +12,8 @@ private urlApi="https://dummyjson.com/users/";
 
   constructor(private http:HttpClient) { }
 
-  getUser(id:number):Observable<User>{
-    return this.http.get<User>(this.urlApi+id).pipe(
+  getUser():Observable<User>{
+    return this.http.get<User>(this.urlApi).pipe(
       catchError(this.HandlerError)
     );
   }

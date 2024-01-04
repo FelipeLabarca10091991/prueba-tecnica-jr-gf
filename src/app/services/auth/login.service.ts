@@ -10,10 +10,10 @@ import { User } from '../../auth/login/user';
 export class LoginService {
 
   isLogIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-  flowingDataUser: BehaviorSubject<User> = new BehaviorSubject<User>({id:0,username:""});
+  flowingDataUser: BehaviorSubject<User> = new BehaviorSubject<User>({id:3,username:""});
 
   private urlAuth = "https://dummyjson.com/auth/login";
-  private urlUser = "https://dummyjson.com/users/1";
+
 
   constructor(private http:HttpClient) { }
 

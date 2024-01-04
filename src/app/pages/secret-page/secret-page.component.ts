@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { User } from '../../auth/login/user';
 import { UserService } from '../../services/user/user.service';
+import { LoginService } from '../../services/auth/login.service';
 
 @Component({
   selector: 'app-secret-page',
@@ -12,8 +13,8 @@ export class SecretPageComponent {
   user?:User
 
 
-constructor(private userService:UserService){
-  this.userService.getUser(1).subscribe({
+constructor(private loginService:LoginService){
+  loginService.flowingData.subscribe({
     next:(userData)=>{
       this.user=userData;
     },

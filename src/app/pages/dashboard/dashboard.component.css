@@ -1,0 +1,9 @@
+.container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+img{
+  width: 20%;
+  height: 20%;
+}

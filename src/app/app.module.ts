@@ -13,6 +13,9 @@ import { LoginService } from './services/auth/login.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SecretPageComponent } from './pages/secret-page/secret-page.component';
 import { UserService } from './services/user/user.service';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { GuardService } from './auth/guard.service';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { UserService } from './services/user/user.service';
     DashboardComponent,
     LoginComponent,
     NavComponent,
-    SecretPageComponent
+    SecretPageComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,7 @@ import { UserService } from './services/user/user.service';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [LoginService,UserService,
+  providers: [LoginService,UserService,GuardService,
     provideClientHydration()
   ],
   bootstrap: [AppComponent]
